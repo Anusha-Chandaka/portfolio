@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anusha Chandaka - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+        .glow {
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+        }
+        .glow-btn:hover {
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.7);
+            transform: translateY(-2px);
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #1e3a8a, #0f172a);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(59, 130, 246, 0.2), transparent);
+            animation: pulse 10s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.3; }
+            100% { transform: scale(1); opacity: 0.5; }
+        }
+        .progress-bar {
+            height: 8px;
+            background-color: #3b82f6;
+            border-radius: 4px;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+        .theme-switcher i {
+            transition: transform 0.3s ease;
+        }
+        .theme-switcher:hover i {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="transition-all duration-500">
+    <!-- Floating Hire Me Button -->
+    <a href="#contact" class="fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-full glow-btn z-50 transition-all">
+        Hire Me
+    </a>
+
+    <!-- Theme Switcher -->
+    <button id="theme-switcher" class="fixed top-6 right-6 text-white p-2 rounded-full bg-blue-600 glow-btn z-50">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-bg py-20 text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4" data-aos="fade-up">Hi, I’m Anusha Chandaka 👩‍💻</h1>
+            <p class="text-xl md:text-2xl mb-6" data-aos="fade-up" data-aos-delay="100">Aspiring Software Developer | Problem Solver | Tech Enthusiast</p>
+            <div class="flex justify-center gap-4">
+                <a href="/path/to/resume.pdf" download class="bg-blue-600 text-white px-6 py-3 rounded-lg glow-btn transition-all" data-aos="fade-up" data-aos-delay="200">Download Resume</a>
+                <a href="#contact" class="bg-transparent border border-blue-600 text-blue-600 px-6 py-3 rounded-lg glow-btn transition-all" data-aos="fade-up" data-aos-delay="300">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-19" data-aos="fade-up">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="w-23 h-23 rounded-full overflow-hidden glow" data-aos="zoom-in">
+                    <img src="anusha_photo.png" alt="Anusha Chandaka" class="w-full h-full object-cover">
+                   
+                </div>
+                <p class="text-lg md:w-2/3" data-aos="fade-up" data-aos-delay="100" >
+                As a B.Tech CSE graduate from GITAM University, I bring expertise in Python, ML, and Web Development. I thrive on solving complex problems through smart, scalable software                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-semibold mb-4"><i class="fas fa-code mr-2"></i>Languages</h3>
+                    <div class="mb-4">
+                        <span class="block mb-1">Python</span>
+                        <div class="w-full bg-gray-700 rounded-full h-2"><div class="progress-bar w-90%"></div></div>
+                    </div>
+                    <div>
+                        <span class="block mb-1">Machine Learning</span>
+                        <div class="w-full bg-gray-700 rounded-full h-2"><div class="progress-bar w-85%"></div></div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-semibold mb-4"><i class="fas fa-laptop-code mr-2"></i>Frontend</h3>
+                    <div class="mb-4">
+                        <span class="block mb-1">HTML</span>
+                        <div class="w-full bg-gray-700 rounded-full h-2"><div class="progress-bar w-95%"></div></div>
+                    </div>
+                    <div class="mb-4">
+                        <span class="block mb-1">CSS</span>
+                        <div class="w-full bg-gray-700 rounded-full h-2"><div class="progress-bar w-90%"></div></div>
+                    </div>
+                    <div class="mb-4">
+                        <span class="block mb-1">JavaScript</span>
+                        <div class="w-full bg-gray-700 rounded-full h-2"><div class="progress-bar w-85%"></div></div>
+                    </div>
+                    <div>
+                        <span class="block mb-1">Django</span>
+                        <div class="w-full bg-gray-700 rounded-full h-2"><div class="progress-bar w-80%"></div></div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-semibold mb-4"><i class="fas fa-database mr-2"></i>Database & Tools</h3>
+                    <div class="mb-4">
+                        <span class="block mb-1">MySQL</span>
+                        <div class="w-full bg-gray-700 rounded-full h-2"><div class="progress-bar w-85%"></div></div>
+                    </div>
+                    <div class="mb-4">
+                        <span class="block mb-1">DBMS</span>
+                        <div class="w-full bg-gray-700 rounded-full h-2"><div class="progress-bar w-80%"></div></div>
+                    </div>
+                    <div>
+                        <span class="block mb-1">Power BI</span>
+                        <div class="w-full bg-gray-700 rounded-full h-2"><div class="progress-bar w-75%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card bg-gray-800 p-6 rounded-lg glow" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-semibold mb-2">Blockchain Agriculture System</h3>
+                    <p class="mb-4">IoT-based smart agriculture system using blockchain for secure data and PMS for real-time monitoring. Achieved 99% accuracy in precision irrigation.</p>
+                    <p class="mb-4"><strong>Tech:</strong> Blockchain, IoT, Python</p>
+                    <a href="#" class="text-blue-600 hover:underline">GitHub</a> | <a href="#" class="text-blue-600 hover:underline">Demo</a>
+                </div>
+                <div class="card bg-gray-800 p-6 rounded-lg glow" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-semibold mb-2">SMS Spam Classifier</h3>
+                    <p class="mb-4">Real-time spam detection app using Naive Bayes and Extra Trees models. Deployed on Heroku.</p>
+                    <p class="mb-4"><strong>Tech:</strong> Python, Machine Learning, Heroku</p>
+                    <a href="#" class="text-blue-600 hover:underline">GitHub</a> | <a href="#" class="text-blue-600 hover:underline">Demo</a>
+                </div>
+                <div class="card bg-gray-800 p-6 rounded-lg glow" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-semibold mb-2">CFD Analysis Platform</h3>
+                    <p class="mb-4">A Django-based web app that provides CFD analysis of 3D models such as cars and aircrafts.</p>
+                    <p class="mb-4"><strong>Tech:</strong> Django, Web Development</p>
+                    <a href="#" class="text-blue-600 hover:underline">GitHub</a> | <a href="#" class="text-blue-600 hover:underline">Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Education</h2>
+            <div class="space-y-6">
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-semibold">GITAM University</h3>
+                    <p>B.Tech in Computer Science and Engineering, 2021–2025 — CGPA: 7.35</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-semibold">Presidency Junior College</h3>
+                    <p>Intermediate, 82.5%</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-semibold">Bhashyam Public School</h3>
+                    <p>CGPA: 9.2</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Certifications</h2>
+            <ul class="list-disc list-inside space-y-4" data-aos="fade-up" data-aos-delay="100">
+                <li>Accenture Data Analytics & Visualization (Virtual Internship)</li>
+                <li>Tata Cybersecurity Analyst (Forage Simulation)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Achievements</h2>
+            <ul class="list-disc list-inside space-y-4" data-aos="fade-up" data-aos-delay="100">
+                <li>NCC C Certificate</li>
+                <li>English Typewriting Certification</li>
+                <li>Volunteer at U&I (NGO)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Clubs & Leadership -->
+    <section id="clubs" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Clubs & Leadership</h2>
+            <ul class="list-disc list-inside space-y-4" data-aos="fade-up" data-aos-delay="100">
+                <li>Co-Lead, Women Leadership Forum (WLF) Club</li>
+                <li>Member, ISTE Student Chapter</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12" data-aos="fade-up">Resume</h2>
+            <!--a href="anusha_resume.pdf" target="_blank" class="..." download class="bg-blue-600 text-white px-6 py-3 rounded-lg glow-btn transition-all" data-aos="fade-up" data-aos-delay="100">View Resume</a!-->
+            <a href="anusha_resume.pdf" download class="bg-blue-600 text-white px-6 py-3 rounded-lg glow-btn transition-all" data-aos="fade-up" data-aos-delay="200">View Resume</a>
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Contact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <p><i class="fas fa-envelope mr-2"></i>anushachandaka13@gmail.com</p>
+                    <p><i class="fas fa-phone mr-2"></i>9391299073</p>
+                    <p><i class="fab fa-linkedin mr-2"></i><a href="https://linkedin.com/in/anusha-chandaka" class="text-blue-600 hover:underline">linkedin.com/in/anusha-chandaka</a></p>
+                </div>
+                <form class="space-y-4" data-aos="fade-up" data-aos-delay="200">
+                    <input type="text" placeholder="Name" class="w-full p-3 bg-gray-700 rounded-lg glow focus:outline-none" required>
+                    <input type="email" placeholder="Email" class="w-full p-3 bg-gray-700 rounded-lg glow focus:outline-none" required>
+                    <textarea placeholder="Message" class="w-full p-3 bg-gray-700 rounded-lg glow focus:outline-none" rows="5" required></textarea>
+                    <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg glow-btn transition-all">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-800 text-center">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center gap-6 mb-4">
+                <a href="https://linkedin.com/in/anusha-chandaka" class="text-blue-600 hover:text-blue-400"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="#" class="text-blue-600 hover:text-blue-400"><i class="fab fa-github fa-2x"></i></a>
+            </div>
+            <p>© 2025 Anusha Chandaka </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000 });
+
+        const themeSwitcher = document.getElementById('theme-switcher');
+        themeSwitcher.addEventListener('click', () => {
+            document.body.classList.toggle('bg-white');
+            document.body.classList.toggle('text-gray-900');
+            document.querySelectorAll('.bg-gray-900').forEach(el => el.classList.toggle('bg-gray-100'));
+            document.querySelectorAll('.bg-gray-800').forEach(el => el.classList.toggle('bg-gray-200'));
+            document.querySelectorAll('.text-white').forEach(el => el.classList.toggle('text-gray-900'));
+            document.querySelectorAll('.glow').forEach(el => el.classList.toggle('shadow-md'));
+            const icon = themeSwitcher.querySelector('i');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+        });
+
+        // Form submission (placeholder)
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Message sent! (This is a placeholder)');
+        });
+    </script>
+</body>
+</html>
